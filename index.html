@@ -39,34 +39,35 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 
 /* навігація */
-nav{position:sticky;top:0;z-index:5;background:var(--navy2);color:#ece6da;border-bottom:1px solid rgba(201,165,92,.35)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);color:var(--ink);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding:14px max(5vw,18px)}
 .logo{font:600 24px "Cormorant Garamond",serif;text-decoration:none;margin-right:auto;letter-spacing:.01em}
 .logo span{color:var(--gold)}
+.gold-ink{color:var(--gold)}
 nav .links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
 nav .links a{text-decoration:none;opacity:.85;padding:8px 0}
-nav .links a:hover{opacity:1;color:var(--gold2)}
+nav .links a:hover{opacity:1;color:var(--gold)}
 @media(max-width:860px){nav .links{display:none}}
 
 /* кнопки */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:13px 30px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--gold);transition:background .2s,color .2s}
 .btn-gold{background:var(--gold);color:var(--navy2)}
 .btn-gold:hover{background:var(--gold2)}
-.btn-ghost{color:var(--gold2)}
+.btn-ghost{color:var(--ink)}
 .btn-ghost:hover{background:rgba(201,165,92,.12)}
 
 /* герой */
-.hero{background:radial-gradient(120% 90% at 75% 20%,#1b2c47 0%,var(--navy) 45%,var(--navy2) 100%);color:#ece6da;padding:clamp(40px,6vw,88px) max(5vw,18px)}
+.hero{background:radial-gradient(90% 80% at 80% 10%,light-dark(#fbf6ec,#132238) 0%,var(--bg) 70%);color:var(--ink);padding:clamp(40px,6vw,88px) max(5vw,18px)}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
-.hero .kicker{color:var(--gold2);font:italic 500 22px "Cormorant Garamond",serif;margin:0 0 14px}
+.hero .kicker{color:var(--gold);font:italic 500 22px "Cormorant Garamond",serif;margin:0 0 14px}
 .hero h1{font-size:clamp(46px,6.6vw,84px);font-weight:500;line-height:1}
-.hero p.sub{font-size:18px;max-width:38ch;margin:24px 0 34px;color:#c9ccd3}
+.hero p.sub{font-size:18px;max-width:38ch;margin:24px 0 34px;color:var(--muted)}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
 .art{display:block;width:100%;height:auto;max-height:520px}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.art{max-height:340px}}
 
 /* смуга фактів */
-.facts{background:var(--navy2);color:#d8d2c4;padding:20px max(5vw,18px);border-top:1px solid rgba(201,165,92,.25)}
+.facts{background:var(--alt);color:var(--ink);padding:20px max(5vw,18px);border-block:1px solid var(--line)}
 .facts .wrap{display:flex;flex-wrap:wrap;gap:10px 44px;font-size:15px}
 .facts span{display:flex;align-items:center;gap:12px}
 .facts span::before{content:"";width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--gold)}
@@ -89,16 +90,13 @@ nav .links a:hover{opacity:1;color:var(--gold2)}
 @media(max-width:860px){.cols{grid-template-columns:1fr;gap:32px}}
 
 /* медичний туризм */
-.med{background:var(--navy);color:#ece6da}
+.med{background:var(--alt);color:var(--ink);border-top:3px solid var(--gold)}
 .med .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px)}
-.med .lead{color:#c9ccd3}
-.med h2{color:#f3ecdd}
-.med .kicker{color:var(--gold2);font:italic 500 22px "Cormorant Garamond",serif;margin:0 0 12px}
+.med .kicker{color:var(--gold);font:italic 500 22px "Cormorant Garamond",serif;margin:0 0 12px}
 .med ul{list-style:none;margin:0;padding:0}
-.med li{padding:26px 0;border-top:1px solid rgba(201,165,92,.35)}
-.med li:last-child{border-bottom:1px solid rgba(201,165,92,.35)}
-.med li h3{color:var(--gold2)}
-.med li p{margin:8px 0 0;color:#c9ccd3}
+.med li{padding:26px 0;border-top:1px solid var(--gold)}
+.med li:last-child{border-bottom:1px solid var(--gold)}
+.med li p{margin:8px 0 0;color:var(--muted)}
 .med .btn{margin-top:34px}
 @media(max-width:860px){.med .wrap{grid-template-columns:1fr}}
 
@@ -127,12 +125,11 @@ details[open] summary::after{content:"−"}
 details p{margin:10px 0 0;color:var(--muted)}
 
 /* контакти */
-.contact{background:var(--navy2);color:#ece6da;text-align:center}
-.contact h2{color:#f3ecdd}
-.contact .lead{color:#c9ccd3;margin-inline:auto}
+.contact{background:var(--alt);color:var(--ink);text-align:center;border-top:1px solid var(--line)}
+.contact .lead{margin-inline:auto}
 .contact .rule{margin:0 auto 22px}
 .channels{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:36px}
-footer{background:var(--navy2);color:#9aa1ad;font-size:14px;padding:22px max(5vw,18px) 34px;border-top:1px solid rgba(201,165,92,.25)}
+footer{background:var(--alt);color:var(--muted);font-size:14px;padding:22px max(5vw,18px) 34px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
 .draw path,.draw line,.draw circle{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s ease-out forwards}
@@ -211,7 +208,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div>
 </section>
 
-<section class="band alt" id="services">
+<section class="band" id="services" style="padding-top:0">
   <div class="wrap">
     <div class="rule"></div>
     <h2>Усе для спокійного відпочинку</h2>
@@ -275,7 +272,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div>
 </section>
 
-<section class="band alt" id="how">
+<section class="band" id="how">
   <div class="wrap">
     <div class="rule"></div>
     <h2>Як замовити</h2>
@@ -287,7 +284,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div>
 </section>
 
-<section class="band" id="faq">
+<section class="band" id="faq" style="padding-top:0">
   <div class="wrap">
     <div class="rule"></div>
     <h2>Часті питання</h2>
@@ -329,7 +326,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
   const tours = [
     {name:'Чічен-Іца, сенот і Вальядолід', text:'Головна піраміда майя, одне з нових семи чудес світу. Купання в сеноті та прогулянка колоніальним містечком.', time:'Цілий день'},
-    {name:'Тулум і Акумаль', text:'Руїни міста майя просто над Карибським морем, а потім плавання з морськими черепахами.', time:'Цілий день'},
+    {name:'Тулум і сенот', text:'Руїни міста майя просто над Карибським морем, а потім купання в сеноті з прозорою водою.', time:'Цілий день'},
     {name:'Сеноти Рив\'єри Майя', text:'Підземні озера з прозорою водою: відкриті, печерні й напівпечерні. Підберемо найгарніші поблизу вашого готелю.', time:'Пів дня'},
     {name:'Коба і джунглі', text:'Стародавнє місто майя серед джунглів, яке зручно об\'їжджати на велосипеді, і сенот поруч.', time:'Пів дня'},
     {name:'Ісла-Мухерес', text:'Острів з білим піском і бірюзовим морем: катер, снорклінг і вільний час на пляжі.', time:'Цілий день'}
